@@ -1,0 +1,7 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sDenyName
+metadata:
+  name: no-policy-violation-002
+spec:
+  parameters:
+    invalidName: "policy-violation-002"

@@ -1,0 +1,16 @@
+apiVersion: configsync.gke.io/v1alpha1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: sada
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/anupam-mishra/config-synctest
+    branch: main
+    dir: /
+    auth: none
+    # Refer to a Secret you create to hold the private key, cookiefile, or token.
+    # secretRef:
+    #   name: SECRET_NAME
+# [END anthosconfig_config_sync_quickstart_multirepo_root_repo_sync] 

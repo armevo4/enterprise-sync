@@ -1,0 +1,15 @@
+kind: ClusterSelector
+apiVersion: configmanagement.gke.io/v1
+metadata:
+  name: fleet-cluster-01
+spec:
+  selector:
+    matchExpressions:
+    - key: env
+      operator: In
+      values:
+      - test
+    - key: location
+      operator: In
+      values:
+      - usa
